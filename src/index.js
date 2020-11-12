@@ -1,17 +1,47 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const BookList = () => {
+    return (
+        <section className='booklist'>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            
+                     
+        </section>
+    )
+    
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Book = () => {return <div className='book'> <Image/>
+    <Title/>
+    <Author/>
+    </div>
+
+}
+    
+
+const Image = () => { return <img src="https://images-na.ssl-images-amazon.com/images/I/61rAZbhTV4L.jpg" alt=""/>
+    
+}
+
+const Title = () => { return <h3>GTA V</h3>
+    
+}
+const Author = () => { return <h4 style={{color: 'black', margintop: '0.25rem'}}>Rockstar Games</h4>
+    
+}
+
+ReactDOM.render(<BookList/>, document.getElementById('root'))
+
+
+//css
+
